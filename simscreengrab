@@ -1,0 +1,11 @@
+#!/bin/bash
+(
+RESULT=RED
+
+xwd -root | convert - /tmp/SimScreenGrab-`date +%s`.png 2>&1 && RESULT=GREEN
+
+#xlogo -bg $RESULT
+echo $RESULT
+
+) > /tmp/march.out
+
